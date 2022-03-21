@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> 
+</head>
+
+<body class="m-4 box-border bg-gray-300 font-mono">
+
+    <div class="container min-h-full min-w-full items-center justify-center p-2 bg-white">
+
+        <header class="flex justify-center p-2">
+            <span class="text-center text-xl font-bold text-white bg-blue-300 w-full">WEATHER DASHBOARD</span>
+        </header>
+
+        <main id="main-grid" class="grid grid-cols-7 grid-rows-7 gap-2 p-2">
+
+            <div id="search-box" class="col-span-2 row-span-3 bg-gray-400 p-3 mr-3">
+
+                <h2 class = 'font-bold text-center my-1'>Search for a City:</h2>
+                <input id="autocomplete" placeholder="Enter City" type="text" class="w-full p-1 my-2">
+                <button id="search-btn" class="bg-blue-600 rounded justify-center my-2 w-full">Search</button>
+
+            </div>
+
+            <div id="main-info" class="col-span-5 bg-gray-300 border border-solid border-black p-3   leading-10">
+                <h2 id="city-name-main" class="font-bold">Please Enter a City</h2>
+                <p id="city-temp-main">Temp: </p>
+                <p id="city-wind-main">Wind: </p>
+                <p id="city-humid-main">Humidity: </p>
+                <p id="city-uv-main">UV Index: </p>
+            </div>
+
+            <span class="col-span-5 text-center">5-Day Forecast</span>
+
+        </main>
+    </div>
+
+    <script src=".\assets\js\script.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-e97oHhkLd5d_RGMQVsXsQ9pNU4Rk5HI&libraries=places&callback=initAutocomplete"></script>
+</body>
+</html>
